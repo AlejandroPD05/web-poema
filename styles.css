@@ -1,13 +1,13 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: flex;              /* activamos flexbox */
-  justify-content: center;    /* centrado horizontal */
-  align-items: center;        /* centrado vertical */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(to bottom, #0b1d3a, #1e3c72);
   font-family: 'Georgia', serif;
   color: #e0f7fa;
-  overflow: hidden;           /* ocultamos scroll innecesario */
+  overflow: hidden;
 }
 
 .stars {
@@ -34,7 +34,8 @@ body {
   position: relative;
   z-index: 2;
   max-width: 700px;
-  padding: 30px;
+  max-height: 90vh;
+  padding: 2vh 3vw;
   text-align: center;
   background: rgba(0,0,0,0.3);
   border-radius: 20px;
@@ -42,6 +43,7 @@ body {
   box-shadow: 0 0 30px rgba(0, 255, 150, 0.2);
   opacity: 0;
   transform: translateY(40px);
+  overflow-y: auto;
 }
 
 .container.show {
@@ -50,8 +52,8 @@ body {
 
 p {
   line-height: 1.8;
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin-bottom: 1.5vh;
+  font-size: clamp(16px, 2vw, 20px);
   opacity: 0;
   transform: translateY(20px);
   transition: all 1.5s ease;
@@ -60,7 +62,7 @@ p {
 
 p span {
   display: block;
-  text-align: center; /* centrado perfecto incluso con <br> */
+  text-align: center;
 }
 
 p.show {
@@ -71,13 +73,14 @@ p.show {
 
 h1 {
   color: #80deea;
-  margin-bottom: 20px;
+  margin-bottom: 2vh;
+  font-size: clamp(24px, 4vw, 32px);
 }
 
 .heart {
   color: #00e676;
-  font-size: 24px;
-  margin-top: 20px;
+  font-size: clamp(20px, 4vw, 28px);
+  margin-top: 2vh;
   animation: pulse 1.5s infinite;
   opacity: 0;
   transition: opacity 1.5s ease;
@@ -97,4 +100,12 @@ h1 {
   0% { text-shadow: 0 0 2px #00e676; }
   50% { text-shadow: 0 0 10px #00ff9f; }
   100% { text-shadow: 0 0 2px #00e676; }
+}
+
+.container::-webkit-scrollbar {
+  width: 6px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: rgba(0,255,150,0.4);
+  border-radius: 3px;
 }
