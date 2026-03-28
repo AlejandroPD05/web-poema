@@ -54,11 +54,8 @@ p {
   opacity: 0;
   transform: translateY(20px);
   transition: all 1.5s ease;
-  display: inline-block;
-}
-
-p span {
-  display: block;
+  display: block; /* cada párrafo en su línea */
+  white-space: pre-line; /* respeta saltos de línea */
   text-align: center;
 }
 
