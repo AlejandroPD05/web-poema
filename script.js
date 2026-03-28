@@ -19,9 +19,9 @@ setTimeout(() => {
   paragraphs.forEach((p, i) => {
     setTimeout(() => {
       p.classList.add('show');
-    }, i * 2500);
+    }, i * 1500);
   });
   setTimeout(() => {
     heart.classList.add('show');
-  }, paragraphs.length * 2500);
+  }, paragraphs.length * 1500);
 }, 1500);
