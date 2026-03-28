@@ -4,10 +4,10 @@ body {
   font-family: 'Georgia', serif;
   color: #e0f7fa;
   background: linear-gradient(to bottom, #0b1d3a, #1e3c72);
-  overflow-y: auto; /* scroll de toda la página */
+  overflow-y: auto; 
   display: flex;
   justify-content: center;
-  padding: 40px 0; /* espacio arriba y abajo */
+  padding: 80px 0; /* margen arriba y abajo */
 }
 
 .stars {
@@ -37,25 +37,23 @@ body {
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0, 255, 150, 0.2);
-  padding: 2vh 3vw;
+  padding: 4vh 4vw;
   text-align: center;
   opacity: 0;
   transform: translateY(40px);
 }
 
-.container.show {
-  opacity: 1;
-}
+.container.show { opacity: 1; }
 
 p {
-  line-height: 1.8;
-  margin-bottom: 1.5vh;
+  line-height: 2;
+  margin-bottom: 3vh;
   font-size: clamp(16px, 2vw, 20px);
   opacity: 0;
   transform: translateY(20px);
   transition: all 1.5s ease;
-  display: block; /* cada párrafo en su línea */
-  white-space: pre-line; /* respeta saltos de línea */
+  display: block;
+  white-space: pre-line;
   text-align: center;
 }
 
@@ -74,15 +72,13 @@ h1 {
 .heart {
   color: #00e676;
   font-size: clamp(20px, 4vw, 28px);
-  margin-top: 2vh;
+  margin-top: 4vh;
   animation: pulse 1.5s infinite;
   opacity: 0;
   transition: opacity 1.5s ease;
 }
 
-.heart.show {
-  opacity: 1;
-}
+.heart.show { opacity: 1; }
 
 @keyframes pulse {
   0% { transform: scale(1); }

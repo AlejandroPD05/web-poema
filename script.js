@@ -13,15 +13,11 @@ for (let i = 0; i < 100; i++) {
   starsContainer.appendChild(star);
 }
 
-// Mostrar poema con delay, párrafos uno a uno
+// Mostrar poema párrafo por párrafo
 setTimeout(() => {
   poema.classList.add('show');
   paragraphs.forEach((p, i) => {
-    setTimeout(() => {
-      p.classList.add('show');
-    }, i * 1500);
+    setTimeout(() => { p.classList.add('show'); }, i * 2500);
   });
-  setTimeout(() => {
-    heart.classList.add('show');
-  }, paragraphs.length * 1500);
+  setTimeout(() => { heart.classList.add('show'); }, paragraphs.length * 2500);
 }, 1500);
