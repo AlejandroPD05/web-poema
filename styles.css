@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(to bottom, #0b1d3a, #1e3c72);
   font-family: 'Georgia', serif;
   color: #e0f7fa;
-  overflow: hidden;
+  background: linear-gradient(to bottom, #0b1d3a, #1e3c72);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* permite scroll natural */
+  padding: 40px 0;
+  overflow-y: auto; /* scroll en la página */
 }
 
 .stars {
@@ -34,16 +34,15 @@ body {
   position: relative;
   z-index: 2;
   max-width: 700px;
-  max-height: 90vh;
-  padding: 2vh 3vw;
-  text-align: center;
+  width: 90%;
   background: rgba(0,0,0,0.3);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0, 255, 150, 0.2);
+  padding: 2vh 3vw;
+  text-align: center;
   opacity: 0;
   transform: translateY(40px);
-  overflow-y: auto;
 }
 
 .container.show {
@@ -100,12 +99,4 @@ h1 {
   0% { text-shadow: 0 0 2px #00e676; }
   50% { text-shadow: 0 0 10px #00ff9f; }
   100% { text-shadow: 0 0 2px #00e676; }
-}
-
-.container::-webkit-scrollbar {
-  width: 6px;
-}
-.container::-webkit-scrollbar-thumb {
-  background: rgba(0,255,150,0.4);
-  border-radius: 3px;
 }
