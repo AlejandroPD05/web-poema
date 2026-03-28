@@ -1,10 +1,13 @@
 body {
   margin: 0;
   min-height: 100vh;
+  display: flex;              /* activamos flexbox */
+  justify-content: center;    /* centrado horizontal */
+  align-items: center;        /* centrado vertical */
   background: linear-gradient(to bottom, #0b1d3a, #1e3c72);
   font-family: 'Georgia', serif;
   color: #e0f7fa;
-  overflow-x: hidden;
+  overflow: hidden;           /* ocultamos scroll innecesario */
 }
 
 .stars {
@@ -31,7 +34,6 @@ body {
   position: relative;
   z-index: 2;
   max-width: 700px;
-  margin: 80px auto;
   padding: 30px;
   text-align: center;
   background: rgba(0,0,0,0.3);
@@ -58,7 +60,7 @@ p {
 
 p span {
   display: block;
-  text-align: center; /* fuerza centrado perfecto incluso con <br> */
+  text-align: center; /* centrado perfecto incluso con <br> */
 }
 
 p.show {
